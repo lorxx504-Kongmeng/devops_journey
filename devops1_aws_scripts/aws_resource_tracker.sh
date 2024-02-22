@@ -32,3 +32,7 @@ aws lambda list-functions
 # list IAM users
 echo "Print list of IAM users"
 aws iam list-users
+
+# Getting just aws ec2 instanceid
+echo "Print aws ec2 instanceid"
+aws ec2 describe-instances | jq '.Reservations[].Instances[].InstanceId'
